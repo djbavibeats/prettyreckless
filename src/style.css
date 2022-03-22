@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.journal_wrapper {
+    /* Modal Settings To Change */
+    display: none;
+    opacity: 0;
+    /* End Modal Settings */
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 1;
+}
+
+.close_journal {
+    padding: 15px 15px;
+    width: 100px;
+    background: white;
+    margin: 0 auto;
+    top: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.close_journal:hover {
+    cursor: pointer;
+}
