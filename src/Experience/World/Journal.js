@@ -53,7 +53,6 @@ export default class Journal {
     setRaycaster() {
         this.raycaster = new THREE.Raycaster()
         this.mouse = new THREE.Vector2()
-        console.log(this.camera)
         
 
         // window.addEventListener('mousemove', (event) => {
