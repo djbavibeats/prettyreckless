@@ -16,6 +16,7 @@ body
     top: 0;
     left: 0;
     outline: none;
+    z-index: -10;
 }
 
 .journal_wrapper {
@@ -41,5 +42,49 @@ body
 }
 
 .close_journal:hover {
+    cursor: pointer;
+}
+
+.instructions_wrapper {
+    /* Modal Settings To Change */
+    /* display: none; */
+    /* opacity: 0; */
+    /* End Modal Settings */
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.65);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.instructions_content {
+    background: rgba(0,0,0,1);
+    /* max-width: 95%; */
+    margin: 0 auto;
+    padding: 25px;
+    color: white;
+    text-align: center;
+}
+
+.instructions_content h1 {
+    margin-bottom: 15px;
+}
+
+.close_instructions {
+    padding: 15px 15px;
+    /* width: 100px; */
+    background: white;
+    margin: 0 auto;
+    color: black;
+    margin-top: 25px;
+    position: relative;
+    text-align: center;
+}
+
+.close_instructions:hover {
     cursor: pointer;
 }

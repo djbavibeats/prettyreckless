@@ -30,5 +30,10 @@ export default [
         name: 'floorDisplacementTexture',
         type: 'texture',
         path: 'textures/floor/displacement.jpg'
+    },
+    {
+        name: 'journalModel',
+        type: 'gltfModel',
+        path: 'models/Journal/journal.gltf'
     }
 ]

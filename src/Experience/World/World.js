@@ -32,7 +32,9 @@ export default class World {
     }
 
     update() {
-        if (this.journal)
+        if (this.journal) {
             this.journal.update()
+            this.environment.update()
+        }
     }
 }
