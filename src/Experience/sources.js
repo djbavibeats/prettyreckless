@@ -34,6 +34,6 @@ export default [
     {
         name: 'journalModel',
         type: 'gltfModel',
-        path: 'models/Journal/journal.gltf'
+        path: 'models/journal/journal.gltf'
     }
 ]
