@@ -14,6 +14,7 @@ export default class Journal {
         if (this.debug.active) {
             this.debugFolder =this.debug.ui.addFolder('Journal')
         }
+
         this.currentIntersect = null
        
         this.resource = this.resources.items.journalModel
@@ -55,28 +56,32 @@ export default class Journal {
         this.mouse = new THREE.Vector2()
         
 
-        // window.addEventListener('mousemove', (event) => {
-        //     this.mouse.x = event.clientX / this.sizes.width * 2 - 1
-        //     this.mouse.y = - (event.clientY / this.sizes.height) * 2 + 1
-        // })
+        window.addEventListener('mousemove', (event) => {
+            this.mouse.x = event.clientX / this.sizes.width * 2 - 1
+            this.mouse.y = - (event.clientY / this.sizes.height) * 2 + 1
+        })
 
-        // window.addEventListener('click', (e) => {
-        //     let modal
-            
-        //     if (this.currentIntersect) {
-        //         modal = document.getElementById('journal_wrapper')
-        //         modal.style.display = 'flex'
-        //         modal.style.opacity = 1
-        //     }
-        // })
+
+        let journalModal, instructionsModal
+        instructionsModal = document.getElementById('instructions_wrapper')
+        journalModal = document.getElementById('journal_wrapper')
+
+
+        window.addEventListener('click', (e) => {
+            if (this.currentIntersect && instructionsModal.style.display === 'none') {
+                journalModal.style.display = 'flex'
+                journalModal.style.opacity = 1
+                document.getElementById('body').style.cursor = 'default'
+            }
+        })
+        
+        
 
         // window.addEventListener('touchstart', () => {
-        //     let modal
         //     console.log('touch')
-        //     if (this.currentIntersect) {
-        //         modal = document.getElementById('journal_wrapper')
-        //         modal.style.display = 'flex'
-        //         modal.style.opacity = 1
+        //     if (this.currentIntersect && instructionsModal.style.display === 'none') {
+        //         journalModal.style.display = 'flex'
+        //         journalModal.style.opacity = 1
         //     }
         // })
         
@@ -90,6 +95,12 @@ export default class Journal {
 
         this.raycaster.setFromCamera(this.mouse, this.camera.instance)
         const intersects = this.raycaster.intersectObjects([ this.model ])
+        if (this.currentIntersect !== null) {
+            console.log('on it')
+            document.getElementById('body').style.cursor = 'pointer'
+        } else {
+            document.getElementById('body').style.cursor = 'default'
+        }
         if (intersects.length) {
             this.currentIntersect = intersects[0]
         } else {
