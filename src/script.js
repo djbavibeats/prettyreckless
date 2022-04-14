@@ -71,6 +71,7 @@ window.onload = function () {
             uploadToken: token
         })
         
+        // video.play()
         recorder.start()
         
         startButton.disabled = true
