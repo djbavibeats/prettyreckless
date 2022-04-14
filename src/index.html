@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Pretty Reckless</title>
+
+    <!-- API.VIDEO START -->
+    <script src="https://unpkg.com/@api.video/media-recorder" defer></script>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #video {
+            width: 640;
+            height: 480;
+            border: 1px solid gray;
+        }
+        #container div {
+            margin: 10px 0;
+        }
+    </style>
+    <!-- API.VIDEO END -->
 </head>
 <body id="body">
-    <div id="journal_wrapper" class="journal_wrapper">
+    <div id="container">
+        <div>
+            <video id="video"></video>
+        </div>
+        <div>
+            <button id="start" disabled>start recording</button>
+            <button id="stop" disabled>stop recording</button>
+        </div>
+        <div>
+            <p>Video link: <span id="video-link"><i>will be displayed when the recording is finished</i></span></p>
+        </div>
+    </div>
+    <script type="text/javascript"> 
+       
+    </script>
+</body>
+<!-- <body id="body"> -->
+    <!-- <div id="journal_wrapper" class="journal_wrapper">
         <div id="close_journal" class="close_journal">Close</div>
     </div>
     <div id="instructions_wrapper" class="instructions_wrapper">
@@ -16,6 +52,29 @@
             <div id="close_instructions" class="close_instructions">Enter</div>
         </div>
     </div>
-    <canvas class="webgl"></canvas>
-</body>
+    <canvas class="webgl"></canvas> -->
+<!-- </body> -->
 </html>
+<!-- <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <script src="https://unpkg.com/@api.video/media-recorder" defer></script>
+        <style>
+            #container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            #video {
+                width: 640;
+                height: 480;
+                border: 1px solid gray;
+            }
+            #container div {
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+
+    
+</html> -->
